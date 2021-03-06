@@ -1,3 +1,16 @@
 .user-list {
-  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-list__card {
+  width: 100px;
+}
+
+.user-list__card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
 }

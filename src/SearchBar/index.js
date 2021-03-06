@@ -1,11 +1,28 @@
-import './searchBar.css';
+import React from "react";
+import PropType from "prop-types";
 
-const SearchBar = () => {
+import "./searchBar.css";
+
+const SearchBar = ({ onSubmit, search, setSearch }) => {
   return (
     <div className="searchbar">
-      SearchBar
+      <form onSubmit={onSubmit}>
+        <input
+          type="text"
+          placeholder="Search ..."
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
+        <button type="submit">Search</button>
+      </form>
     </div>
   );
+};
+
+SearchBar.propTypes = {
+  onSubmit: PropType.func.isRequired,
+  search: PropType.string.isRequired,
+  setSearch: PropType.func.isRequired,
 };
 
 export default SearchBar;
