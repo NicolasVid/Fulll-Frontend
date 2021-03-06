@@ -4,3 +4,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.main-page img {
+  height: 100px;
+}

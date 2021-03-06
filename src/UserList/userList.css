@@ -6,11 +6,24 @@
 }
 
 .user-list__card {
-  width: 100px;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.user-list__error {
+  color: #CC2936;
+}
+
+.user-list__card p {
+  font-size: 24px;
 }
 
 .user-list__card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+  width: 100px;
+  border-radius: 100px;
 }

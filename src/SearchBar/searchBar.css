@@ -1,17 +1,20 @@
 .searchbar {
   width: 100%;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .searchbar input {
   width: 80%;
   padding: 1rem;
   margin-left: 1rem;
+  border: none;
+  border-bottom: 1px solid #D1D1D1;
+  font-size: 20px;
+  text-align: center;
 }
 
-.searchbar button {
-  padding: 1rem;
-  width: 100px;
-  margin-left: 1rem;
+.searchbar input::placeholder {
+  font-size: 20px;
+  text-align: center;
 }

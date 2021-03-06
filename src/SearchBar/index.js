@@ -3,26 +3,24 @@ import PropType from "prop-types";
 
 import "./searchBar.css";
 
-const SearchBar = ({ onSubmit, search, setSearch }) => {
+const SearchBar = ({ setSearch, search }) => {
   return (
     <div className="searchbar">
-      <form onSubmit={onSubmit}>
+      <form onSubmit={(event) => event.preventDefault()}>
         <input
           type="text"
-          placeholder="Search ..."
+          placeholder="Type in to search a github user..."
           value={search}
           onChange={(event) => setSearch(event.target.value)}
         />
-        <button type="submit">Search</button>
       </form>
     </div>
   );
 };
 
 SearchBar.propTypes = {
-  onSubmit: PropType.func.isRequired,
-  search: PropType.string.isRequired,
   setSearch: PropType.func.isRequired,
+  search: PropType.string.isRequired,
 };
 
 export default SearchBar;
